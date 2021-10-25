@@ -1,5 +1,4 @@
-require 'httparty'
-require 'json'
+
 class Currency < ApplicationRecord
    
       # Calculate future value in one year  

@@ -1,9 +1,7 @@
-require 'websocket-client-simple'
+ 
 class HomeController < ApplicationController
   def index
-    #all_currencies =  Currency.get_currencies
-    #ActionCable.server.broadcast('currency_channel', all_currencies)
-  
+ 
   end
 
   # function for get all params from form
@@ -17,8 +15,6 @@ class HomeController < ApplicationController
     @is_valid_invest_bitcoin =  @invest_bitcoin.is_a? Numeric
     @is_valid_invest_ethereum =  @invest_ethereum.is_a? Numeric
     @is_valid_invest_cardano =  @invest_cardano.is_a? Numeric
-
-    puts @is_valid_invest_bitcoin
   end
 
   def get_total

@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 
-Character.create(slug: 'Bitcoin', symbol: "BTC",interest: 5.0)
-Character.create(slug: 'Ethereum', symbol: "ETH",interest: 	4.2 )
-Character.create(slug: 'Cardano', symbol: "ADA",interest:  	1.0 )
+Currency.create(slug: 'Bitcoin', symbol: "BTC",interest: 5.0)
+Currency.create(slug: 'Ethereum', symbol: "ETH",interest: 	4.2 )
+Currency.create(slug: 'Cardano', symbol: "ADA",interest:  	1.0 )
  

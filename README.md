@@ -1,4 +1,4 @@
-# API REST / e2e TEST
+# CURRENCY APP
 
 _This project consists of an application to calculate the future value of an investment and show the real time value of cryptos_
 
@@ -15,37 +15,27 @@ _This project consists of an application to calculate the future value of an inv
 
 ### DEVELOPMENT ENVIROMENT 🔧
 
-_Open CMD_
+_Open CMD and install dependencies_
 
  
 ```
-Run npm install
+Run yarn install
 ```
-
-_Verify Mongo service is Start_
-
+_Create Migrations_
 ```
-sudo service mongod start / sudo systemctl start mongod (Ubuntu) / mongod (MacOS)
+run: rails db:migrate RAILS_ENV=development 
 ```
-
-_Change the data in common/enviroment/.env.development_
+_Initialize Database_
 
 ```
-run npm run start:dev
+rails db:seed
 ```
 
-## Run The Test ⚙️
+_run the project:)_
 
-_start the server and other terminal run npm run test_
-
-### Test end-to-end 🔩
-
-_verify login form funcionality_
- 
-
-### Test  ⌨️
-
-_BDD_
+```
+rails s
+```
  
  
 

@@ -1,5 +1,4 @@
-require 'websocket-client-simple'
-class CurrencyChannel < ApplicationCable::Channel
+ class CurrencyChannel < ApplicationCable::Channel
   def subscribed
     stream_for "currency_channel"
   end
