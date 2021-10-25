@@ -1,0 +1,46 @@
+<div class="col-sm-12 col-md-12" >
+    <div class="card" style="box-shadow: 0 0.46875rem 2.1875rem rgba(31,10,6,0.03),0 0.9375rem 1.40625rem rgba(31,10,6,0.03),0 0.25rem 0.53125rem rgba(31,10,6,0.05),0 0.125rem 0.1875rem rgba(31,10,6,0.03);">
+        <div class="card-header">
+            <h5 class="card-title text-muted">Cantidad a Invertir - U$</h5>
+        </div>
+        <div class="card-body">
+            <%= form_tag calculate_invest_path(:invest_bitcoin,:invest_ethereum,:invest_cardano), method: "post", html: {:class=>"form-horizontal form-label-left", :novalidate => nil} do %> 
+            
+     
+            <div class="row">
+                <div class="input-group flex-nowrap  ">
+                    <span class="input-group-text" id="addon-wrapping">
+                        <%= image_tag("bitcoin.png", :alt => "rss feed") %>
+                    </span>
+                    <input type="text" required class="form-control" id="bitcoinInput" name="invest_bitcoin" placeholder="Inversion Bitcoin"  >
+                  
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px !important;">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">
+                        <%= image_tag("ethereum.png", :alt => "rss feed") %>
+                    </span>
+                    <input type="text" required class="form-control" name="invest_ethereum" placeholder="Inversion Ethereum" >
+                  </div>
+            </div>
+            <div class="row" style="margin-top: 30px !important;">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">
+                        <%= image_tag("cardano.png", :alt => "rss feed") %>
+                    </span>
+                    <input type="text" required class="form-control" name="invest_cardano" placeholder="Inversion Cardano" >
+                  </div>
+            </div>
+            <div class="row" style="margin-top: 30px !important;">
+                <div class="input-group flex-nowrap">
+                    <button type="submit" class="btn-wide btn btn-success  " style="background-color: #3ac47d !important;"> Calcular </button> 
+                </div>                
+            </div>
+           <% end %>
+        </div>
+    </div>
+</div>
+
+ 
+ 

@@ -1,0 +1,70 @@
+<div class="row" style="margin-top:10px;">
+  <div class="col-md-12 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        Valor Actual 
+      </div>
+      <div class="card-body">
+        <table   class="table table-striped table-bordered" style="width:100%" >
+          <thead>
+            <tr>
+              <th>Codigo</th>
+              <th>Price U$</th>
+           </tr>
+          </thead>
+          <tbody id="data"  >
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+ <script>
+      /*only for test , i will remove this code block to other file*/
+var URL = "wss://data.messari.io/api/v1/updates/assets/metrics/market-data"
+let socket = new WebSocket(URL);
+
+
+socket.onopen = function(e) {
+  console.log("[open] Connection established");
+};
+
+
+socket.onmessage = function(event) 
+{
+     var tbl = document.getElementById("data");
+   
+    tbl.innerHTML =''
+    JSON.parse(event.data).forEach(function(field){
+        var row = document.createElement("tr");
+        var cell = document.createElement("td");
+        var cell2 = document.createElement("td");
+        cell.innerHTML = field.name;
+        cell2.innerHTML = field.market_data.price_usd;
+        row.appendChild(cell);
+        row.appendChild(cell2);
+        tbl.appendChild(row);
+    });
+
+    tbl.appendChild(tblBody);
+ // table.appendChild(tbody);
+};
+
+socket.onclose = function(event) {
+  if (event.wasClean) {
+    console.log(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+  } else {
+    console.log('[close] Connection died');
+  }
+};
+
+socket.onerror = function(error) {
+  console.log(`[error] ${error.message}`);
+};
+ 
+ 
+ </script>
+
+ 

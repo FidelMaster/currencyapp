@@ -1,0 +1,15 @@
+<div class="container-fluid">
+ <div class="row" style="margin-top: 30px !important;">
+       <div class="col-3 col-nd-3 col-sm-3" > 
+           <%= render partial: "calculate_investment"%>
+       
+       </div>
+       <div class="col-9 col-nd-9 col-sm-9">
+        <h3 class="text-muted">Proyeccion Inversion</h3>
+        <%= link_to 'Configurar Tasa de Interes', currencies_path %>
+        <%= render partial: "invest_value"%>
+        <%= render partial: "currencie_history"%>
+       </div>
+   </div>
+</div>
+ 

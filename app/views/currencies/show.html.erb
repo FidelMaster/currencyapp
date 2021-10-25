@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @currency.slug %>
+</p>
+
+<p>
+  <strong>Symbol:</strong>
+  <%= @currency.symbol %>
+</p>
+
+<p>
+  <strong>Interest:</strong>
+  <%= @currency.interest %>
+</p>
+
+<%= link_to 'Editar', edit_currency_path(@currency) %> |
+<%= link_to 'Regresar', currencies_path %>
